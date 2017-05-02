@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Budget App</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/budget.css">
+  <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Budget</h1>
+        <br>
+        <br>
+        <div class="header">
+          <div class="balanceContainer">
+<!--            
+            <p id=accountDisplay>Bankszámla egyenleg: <span id="accountBalance">100000</span></p>
+            <p id=cashDisplay>Készpénz egyenleg: <span id="cashBalance">10000</span></p>
+            <p id=creditCardDisplay>Hitelkártya felhasználás: <span id="creditCardBalance">3000</span></p>
+-->
+            <table class="balanceTable">
+              <tr>
+                <td>Bankszámla egyenleg: </td>
+                <td id="accountBalance"></td>
+              </tr>
+              <tr>
+                <td>Készpénz egyenleg: </td>
+                <td id="cashBalance"></td>
+              </tr>
+              <tr>
+                <td>Hitelkártya felhasználás: </td>
+                <td id="creditCardBalance"></td>
+              </tr>
+            </table>
+          </div>
+          <h4>Új tétel felvétele</h4>
+        </div>
+        <form>
+          <div class="form-group">
+            <label for="date">Dátum</label>
+            <input type="date" name="date" class="form-control" id="dateInput" placeholder="pl: 2017.01.01.">
+          </div>
+          <div class="form-group">
+            <label for="amount">Összeg</label>
+            <input type="number" name="amount" class="form-control" id="amountInput" placeholder="pl: 8000">
+          </div>
+          <label for="type">Irány</label>
+          <select class="form-control" name="type">
+              <option value="Bevétel">Bevétel</option>
+              <option value="Kiadás" selected>Kiadás</option>
+              <option value="Pénzfelvétel">Pénzfelvétel</option>
+          </select>
+          <label for="asset">Eszköz</label>
+          <select class="form-control" name="asset">
+              <option value="Bankkártya" selected>Bankkártya</option>
+              <option value="Készpénz">Készpénz</option>
+              <option value="Hitelkártya">Hitelkártya</option>
+          </select>
+          <label for="category">Kategória</label>
+          <select class="form-control" name="category">
+              <option value="Élelmiszer">Élelmiszer</option>
+              <option value="Szórakozás">Szórakozás</option>
+              <option value="Drogéria">Drogéria</option>
+              <option value="Közlekedés">Közlekedés</option>
+              <option value="Ajándék">Ajándék</option>
+              <option value="Rezsi">Rezsi</option>
+          </select>
+<!--          <button type="submit" class="btn btn-success">OK</button>-->
+          <i class="fa fa-check action submit" aria-hidden="true"></i>
+        </form>
+    </div>
+    
+    <br>
+    <br>
+    <br>
+    
+    <div class="container">
+        <h4>Korábbi tételek</h4>
+        <br>
+        <table class="table table-responsive table-striped">
+           <thead>
+            <tr>
+                <th class="col-md-2">Dátum</th>
+                <th class="col-md-2">Összeg</th>
+                <th class="col-md-2">Irány</th>
+                <th class="col-md-2">Eszköz</th>
+                <th class="col-md-2">Kategória</th>
+                <th class="col-md-2"></th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr scope="row">
+                <td contenteditable>2017.04.28.</td>
+                <td contenteditable>4000</td>
+                <td contenteditable>Kiadás</td>
+                <td contenteditable>Készpénz</td>
+                <td contenteditable>Élelmiszer</td>
+                <td>
+                    <span class="action delete"><i class="fa fa-trash" aria-hidden="true"></i></span> 
+                    <span class="action edit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+                </td>
+            </tr>
+            <tr scope="row">
+                <td>2017.05.01.</td>
+                <td>150000</td>
+                <td>Bevétel</td>
+                <td contenteditable>Bankkártya</td>
+                <td>Jövedelem</td>
+                <td>
+                    <span class="action delete"><i class="fa fa-trash" aria-hidden="true"></i></span> 
+                    <span class="action edit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+                </td>
+            </tr>
+           </tbody>
+        </table>
+    </div>
+    <script type="text/javascript" src="lib/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/budget.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script 
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </body>
+</body>
+</html>

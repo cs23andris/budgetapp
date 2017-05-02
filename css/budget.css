@@ -1,0 +1,82 @@
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+table {
+    width: 100%;
+    background-color: white;
+}
+
+form {
+    width: 100%;
+}
+
+body {
+    background-color: #d0dbed;
+    text-transform: uppercase;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.balanceContainer {
+    float: right;
+}
+
+.balanceTable {
+    background-color: #d0dbed;
+    width: 350px;
+}
+
+.balanceTable tr {
+    line-height: 25px; 
+    font-size: 16px;
+}
+
+.header {
+    height: 100px;
+}
+
+
+.action {
+    height: 30px;
+    width: 30px;
+    padding: 5px 5px;
+    border-radius: 20%;
+    margin-right: 10px;
+    text-align: center;
+    color: white;
+    display: inline-block;
+}
+
+.delete:hover {
+    cursor: pointer;
+    background: #e03726;
+}
+
+.delete {
+    background: #e74c3c;
+}
+
+.edit {
+    background: #f4dc42;
+}
+
+.edit:hover {
+    cursor: pointer;
+    background: #edd22a;
+}
+
+.submit {
+    background: #3aaa43;
+    margin-right: 0;
+}
+
+.submit:hover {
+    cursor: pointer;
+    background: #309638;
+}
+
+select {
+    margin-bottom: 15px;
+}
